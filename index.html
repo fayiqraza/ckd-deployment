@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../static/css/style.css">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Chronic Kidney Disease Detection</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post" >
+      <input type="text" name="age" placeholder="Age" required="required" >
+        <input type="text" name="bp" placeholder="Blood Pressure in mm/Hg" required="required" >
+        <input type="text" name="bu" placeholder="Blood Urea(mgs/dl)" required="required" >
+		<input type="text" name="sc" placeholder="Serum Creatinine(mgs/dl)" required="required" >
+		<input type="text" name="sod" placeholder="Sodium(mEq/L)" required="required" >
+		<input type="text" name="hemo" placeholder="Hemoglobin(gms)" required="required" >
+		<input type="text" name="wc" placeholder="White Blood Cell Count(cells/cumm)" required="required" >
+		<input type="text" name="rc" placeholder="Red Blood Cell Count(millions/cmm)" required="required" >
+        <input type="text" name="bgr" placeholder="Blood Glucose Random(mgs/dl)" required="required" >
+		<input type="text" name="al" placeholder="Albumin (Nominal: 0-5)" required="required" >
+		<input type="text" name="su" placeholder="Sugar (Nominal: 0-5)" required="required" >
+        <input type="text" name="appet" placeholder="Appetite(Good or Poor)" required="required" >
+		<input type="text" name="rbc" placeholder="Red Blood Cells(Normal or Abnormal)" required="required" >
+		<input type="text" name="pc" placeholder="Pus Cell(Normal or Abnormal)" required="required" >
+		<input type="text" name="pcc" placeholder="Pus Cell Clumps(Present or Not Present)" required="required" >
+		<input type="text" name="ba" placeholder="Bacteria(Present or Not Present)" required="required" >
+		<input type="text" name="htn" placeholder="Hypertension(Yes or No)" required="required" >
+		<input type="text" name="dm" placeholder="Diabetes Mellitus(Yes or No)" required="required" >
+		<input type="text" name="cad" placeholder="Coronary Artery Disease(Yes or No)" required="required" >
+		<input type="text" name="pe" placeholder="Pedal Edema(Yes or No)" required="required" >
+		<input type="text" name="ane" placeholder="Anemia(Yes or No)" required="required" >
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+
+
+   
+
+ </div>
+
+
+</body>
+</html>
